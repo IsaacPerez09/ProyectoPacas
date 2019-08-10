@@ -1,0 +1,9 @@
+C:\Users\sauli\documents\visual studio 2017\Projects\APIPACAS\ConectarData\bin\Debug\ConectarData.dll.config
+C:\Users\sauli\documents\visual studio 2017\Projects\APIPACAS\ConectarData\bin\Debug\ConectarData.dll
+C:\Users\sauli\documents\visual studio 2017\Projects\APIPACAS\ConectarData\bin\Debug\ConectarData.pdb
+C:\Users\sauli\documents\visual studio 2017\Projects\APIPACAS\ConectarData\bin\Debug\EntityFramework.dll
+C:\Users\sauli\documents\visual studio 2017\Projects\APIPACAS\ConectarData\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sauli\documents\visual studio 2017\Projects\APIPACAS\ConectarData\bin\Debug\EntityFramework.xml
+C:\Users\sauli\documents\visual studio 2017\Projects\APIPACAS\ConectarData\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sauli\documents\visual studio 2017\Projects\APIPACAS\ConectarData\obj\Debug\ConectarData.dll
+C:\Users\sauli\documents\visual studio 2017\Projects\APIPACAS\ConectarData\obj\Debug\ConectarData.pdb

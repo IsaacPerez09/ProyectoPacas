@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BDPACASModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BDPACASEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categorias" EntityType="BDPACASModel.categoria" />
+    <EntitySet Name="clientes" EntityType="BDPACASModel.cliente" />
+    <EntitySet Name="detalle_factura" EntityType="BDPACASModel.detalle_factura" />
+    <EntitySet Name="facturas" EntityType="BDPACASModel.factura" />
+    <EntitySet Name="productoes" EntityType="BDPACASModel.producto" />
+    <EntitySet Name="proveedors" EntityType="BDPACASModel.proveedor" />
+    <EntitySet Name="tipo_de_documento" EntityType="BDPACASModel.tipo_de_documento" />
+  </EntityContainer>
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="idcategoria" />
+    </Key>
+    <Property Name="idcategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreCat" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="detalle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cliente">
+    <Key>
+      <PropertyRef Name="idcliente" />
+    </Key>
+    <Property Name="idcliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_tipo_de_documento" Type="Int32" Nullable="false" />
+    <Property Name="nombreCliente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="apellidocliente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="detalle_factura">
+    <Key>
+      <PropertyRef Name="iddetalle_factura" />
+    </Key>
+    <Property Name="iddetalle_factura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idfactura" Type="Int32" Nullable="false" />
+    <Property Name="idproducto" Type="Int32" Nullable="false" />
+    <Property Name="cantidad" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="factura">
+    <Key>
+      <PropertyRef Name="idfactura" />
+    </Key>
+    <Property Name="idfactura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idcliente" Type="Int32" Nullable="false" />
+    <Property Name="fecha_facturacion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="iva" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+    <Property Name="total_factura" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="producto">
+    <Key>
+      <PropertyRef Name="idproducto" />
+    </Key>
+    <Property Name="idproducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idcategoria" Type="Int32" Nullable="false" />
+    <Property Name="idproveedor" Type="Int32" Nullable="false" />
+    <Property Name="nombreProducto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="fecha_ingreso" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="precioVenta" Type="Int32" Nullable="false" />
+    <Property Name="precioCosto" Type="Int32" Nullable="false" />
+    <Property Name="descripcionProducto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="proveedor">
+    <Key>
+      <PropertyRef Name="idproveedor" />
+    </Key>
+    <Property Name="idproveedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_tipo_de_documento" Type="Int32" Nullable="false" />
+    <Property Name="nom_proveedor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="apellido_proveedor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telf" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tipo_de_documento">
+    <Key>
+      <PropertyRef Name="id_tipo_de_documento" />
+    </Key>
+    <Property Name="id_tipo_de_documento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion_tdd" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
